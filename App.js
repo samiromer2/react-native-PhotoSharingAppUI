@@ -1,12 +1,13 @@
 import 'react-native-gesture-handler';
 import React, { useState } from 'react';
-import { Text, View } from 'react-native';
+import { LogBox, Text, View } from 'react-native';
 import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font';
 import Feather from '@expo/vector-icons/Feather'
 import { useFonts, Nunito_400Regular as NunitoRegular, Nunito_700Bold as NunitoBold } from '@expo-google-fonts/nunito';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import Navigator from './src/navigation/index';
+LogBox.ignoreLogs(['VirtualizedLists']);
 // The theme we'll be using for our navigator
 const MyTheme = {
   ...DefaultTheme,
